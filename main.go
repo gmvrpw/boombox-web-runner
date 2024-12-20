@@ -47,7 +47,7 @@ func main() {
 		log.Fatalf("cannot initialize runner service. %s", err)
 	}
 
-	httpController, err := http.NewHttpRunnerController(&cfg.Controllers.HTTP, logger)
+	httpController, err := http.NewHttpRunnerController(&cfg.Entrypoints.HTTP, logger)
 	if err != nil {
 		log.Fatalf("cannot create http controller. %s", err)
 	}

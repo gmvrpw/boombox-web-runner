@@ -12,14 +12,14 @@ import (
 )
 
 type HttpRunnerController struct {
-	config        *config.HttpControllerConfig
+	config        *config.HttpEntrypointConfig
 	server        *echo.Echo
 	runnerService RunnerService
 	logger        *slog.Logger
 }
 
 func NewHttpRunnerController(
-	config *config.HttpControllerConfig,
+	config *config.HttpEntrypointConfig,
 	logger *slog.Logger,
 ) (*HttpRunnerController, error) {
 	return &HttpRunnerController{config: config, server: echo.New(), logger: logger}, nil
